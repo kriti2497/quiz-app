@@ -15,7 +15,7 @@ const Question: React.FC<{
       <div className="text-lg mb-3">
         {number}. {question.question}
       </div>
-      <div className="grid grid-cols-2 gap-3">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-3">
         {question.answerOptions.map((option: OptionInterface) => {
           return (
             <button

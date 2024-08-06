@@ -29,9 +29,11 @@ const Result: React.FC<{
             {/* {!userAnswers[index] && (
               <span className="pl-2">
                 {
-                  questions[index].answerOptions.filter(
-                    (each: OptionInterface) => each.isCorrect
-                  )[0]
+                  questions[index].answerOptions.filter((option: OptionInterface) => {
+                    if(option.isCorrect) {
+                      return option.text
+                    }
+                  })[0]
                 }
               </span>
             )} */}
